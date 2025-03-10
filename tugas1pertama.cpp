@@ -53,7 +53,18 @@ void sequentialSearch() {
     }
 }
 
+void mengurutkanNama() {
+    for (int i = 0; i < jmlData - 1; i++) {
+        for (int j = 0; j < jmlData - i - 1; j++) {
+            if (daftarRoti[j].nama > daftarRoti[j + 1].nama) {
+                swap(daftarRoti[j], daftarRoti[j + 1]);
+            }
+        }
+    }
+}
+
 void binarySearch() {
+    mengurutkanNama();
     string cariRoti;
     cout << "Masukkan Nama yang dicari: ";
     cin >> ws;
